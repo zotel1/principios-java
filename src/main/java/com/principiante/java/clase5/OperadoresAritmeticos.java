@@ -9,5 +9,8 @@ public class OperadoresAritmeticos {
 
         resultado = numero_uno + numero_dos / 2;
         System.out.println("El resultado es: " + resultado);
+
+        resultado = (numero_uno + numero_dos) / 2;
+        System.out.println("El resultado correcto es: " + resultado);
     }
 }
