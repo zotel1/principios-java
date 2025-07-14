@@ -7,7 +7,7 @@ public class CicloWhile {
 
         while (i < 10) {
             System.out.println(i + ", el valor actual de nuestro entero");
-            i = i+1;
+            i += 2;
         }
     }
 }
