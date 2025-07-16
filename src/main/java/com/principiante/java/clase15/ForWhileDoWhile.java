@@ -14,5 +14,16 @@ public class ForWhileDoWhile {
                 System.out.print(i);
             }
         }
+        i = 1;
+        System.out.println("");
+        System.out.println("Serie con while: ");
+        while (i <=10) {
+            if (i < 10) {
+                System.out.print(i + ", ");
+            } else {
+                System.out.print(i);
+            }
+            i++;
+        }
     }
 }
