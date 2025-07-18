@@ -40,5 +40,25 @@ public class Fibonacci {
             }
             i++;
         }
+
+        i = 0;
+        a = 0;
+        b = 1;
+        c = 0;
+
+        System.out.println("Ciclo con Do-While: ");
+
+        do {
+            if(i < 9){
+                System.out.println(a + ",");
+                c = a + b;
+                a = b;
+                b = c;
+            } else {
+                System.out.println(a);
+            }
+            i++;
+            } while (i < 10);
+        }
     }
-}
+
