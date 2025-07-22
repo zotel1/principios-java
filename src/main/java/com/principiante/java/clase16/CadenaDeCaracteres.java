@@ -19,5 +19,23 @@ public class CadenaDeCaracteres {
             System.out.println("Los nombres son diferentes");
         }
 
+        // Para que no tome en cuenta mayusculas podemos utilizar el metodo IgnireCase
+
+        String nombre_tres = "", nombre_cuatro = "";
+
+        Scanner entradados = new Scanner(System.in);
+
+        System.out.println("Por favor ingresa el primer nombre: ");
+        nombre_tres = entradados.nextLine();
+
+        System.out.println("Por favor dame el segundo nombre: ");
+        nombre_cuatro = entradados.nextLine();
+
+        if (nombre_tres.equalsIgnoreCase(nombre_cuatro)){
+            System.out.println("Los nombres son iguales");
+        } else {
+            System.out.println("Los nombres son diferentes");
+        }
+
     }
 }
