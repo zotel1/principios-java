@@ -56,6 +56,7 @@ public class Formulario extends JFrame implements ActionListener {
         formulario1.setResizable(false);
         formulario1.setLocationRelativeTo(null);
 
+
     }
 
 }
