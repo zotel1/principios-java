@@ -59,6 +59,6 @@ public class Formulario extends JFrame implements ActionListener {
         formulario37.setVisible(true);
         formulario37.setResizable(false);
         formulario37.setLocationRelativeTo(null);
-        formulario37.setBounds(0,0, 300,200);
+        formulario37.setBounds(0,0, 150,100);
     }
 }
