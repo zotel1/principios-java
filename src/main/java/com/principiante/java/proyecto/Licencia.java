@@ -26,7 +26,7 @@ public class Licencia extends JFrame implements ChangeListener, ActionListener {
 
         textArea1 = new JTextArea();
         textArea1.setFont(new Font("Andale Mono", 0, 9));
-        textArea1.setText("Términos y condiciones");
+        textArea1.setText("\n\n          TÉRMINOS Y CONDICIONES");
         scrollPane1 = new JScrollPane(textArea1);
         scrollPane1.setBounds(10, 40, 575, 200);
         add(scrollPane1);
@@ -45,6 +45,7 @@ public class Licencia extends JFrame implements ChangeListener, ActionListener {
         boton2 = new JButton("No Acepto");
         boton2.setBounds(120, 290,100, 30);
         boton2.addActionListener(this);
+        boton2.setEnabled(true);
         add(boton2);
 
         ImageIcon imagen = new ImageIcon("images/coca-cola.png");
