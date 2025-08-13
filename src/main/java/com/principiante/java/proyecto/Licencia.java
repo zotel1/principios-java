@@ -26,7 +26,16 @@ public class Licencia extends JFrame implements ChangeListener, ActionListener {
 
         textArea1 = new JTextArea();
         textArea1.setFont(new Font("Andale Mono", 0, 9));
-        textArea1.setText("\n\n          TÉRMINOS Y CONDICIONES");
+        textArea1.setText("\n\n          TÉRMINOS Y CONDICIONES" +
+                "\n\n            A.  PROHIBIDA SU VENTA O DISTRIBUCI�N SIN AUTORIZACI�N DE CRISTIAN." +
+                "\n            B.  PROHIBIDA LA ALTERACI�N DEL C�DIGO FUENTE O DISE�O DE LAS INTERFACES GR�FICAS." +
+                "\n            C.  CRISTIAN NO SE HACE RESPONSABLE DEL MAL USO DE ESTE SOFTWARE." +
+                "\n\n          LOS ACUERDOS LEGALES EXPUESTOS ACONTINUACI�N RIGEN EL USO QUE USTED HAGA DE ESTE SOFTWARE" +
+                "\n          (LA GEEKIPEDIA DE ERNESTO Y EL AUTOR ERNESTO), NO SE RESPONSABILIZAN DEL USO QUE USTED" +
+                "\n          HAGA CON ESTE SOFTWARE Y SUS SERVICIOS. PARA ACEPTAR ESTOS TERMINOS HAGA CLIC EN (ACEPTO)" +
+                "\n          SI USTED NO ACEPTA ESTOS TERMINOS, HAGA CLIC EN (NO ACEPTO) Y NO UTILICE ESTE SOFTWARE." +
+                "\n\n          PARA MAYOR INFORMACI�N SOBRE NUESTROS PRODUCTOS O SERVICIOS, POR FAVOR VISITE" +
+                "\n          https://cristian-sigel-web-development.vercel.app/");
         scrollPane1 = new JScrollPane(textArea1);
         scrollPane1.setBounds(10, 40, 575, 200);
         add(scrollPane1);
