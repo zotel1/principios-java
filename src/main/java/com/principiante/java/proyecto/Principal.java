@@ -55,6 +55,48 @@ public class Principal extends JFrame implements ActionListener {
         miCalculo.setForeground(new Color(255, 0, 0));
         menuCalcular.add(miCalculo);
         miCalculo.addActionListener(this);
+
+        miRojo = new JMenuItem("Rojo");
+        miRojo.setFont(new Font("Andale Mono", 1, 14));
+        miRojo.setForeground(new Color(255, 0, 0));
+        menuColorFondo.add(miRojo);
+        miRojo.addActionListener(this);
+
+        miNegro = new JMenuItem("Negro");
+        miNegro.setFont(new Font("Andale Mono", 1, 14));
+        miNegro.setForeground(new Color(255, 0, 0));
+        menuColorFondo.add(miNegro);
+        miNegro.addActionListener(this);
+
+        miMorado = new JMenuItem("Morado");
+        miMorado.setFont(new Font("Andale Mono", 1, 14));
+        miMorado.setForeground(new Color(255, 0, 0));
+        menuColorFondo.add(miMorado);
+        miMorado.addActionListener(this);
+
+        miNuevo = new JMenuItem("Nuevo");
+        miNuevo.setFont(new Font("Andale Mono", 1, 14));
+        miNuevo.setForeground(new Color(255, 0, 0));
+        menuColorFondo.add(miNuevo);
+        miNuevo.addActionListener(this);
+
+        miElCreador = new JMenuItem("El creador");
+        miElCreador.setFont(new Font("Andale Mono", 1, 14));
+        miElCreador.setForeground(new Color(255, 0,0));
+        menuColorFondo.add(miElCreador);
+        miElCreador.addActionListener(this);
+
+        miSalir = new JMenuItem("Salir");
+        miSalir.setFont(new Font("Andale mono", 1, 14));
+        miSalir.setForeground(new Color(255, 0, 0));
+        menuColorFondo.addActionListener(this);
+
+        ImageIcon imagen = new ImageIcon(getClass().getResource("/images/logo-codca.png"));
+        labelLogo = new JLabel(imagen);
+        labelLogo.setBounds(5, 5, 250, 100);
+        add(labelLogo);
+
+
     }
 
     public void actionPerformed(ActionEvent e){
