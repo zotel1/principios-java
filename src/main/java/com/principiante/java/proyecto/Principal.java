@@ -108,6 +108,19 @@ public class Principal extends JFrame implements ActionListener {
         labelTitle.setForeground(new Color(255, 255, 255));
         add(labelTitle);
 
+        labelNombre = new JLabel("Nombre completo:");
+        labelNombre.setBounds(25, 188, 180, 25);
+        labelNombre.setFont(new Font("Andale Mono", 1, 12));
+        labelNombre.setForeground(new Color(255, 255, 255));
+        add(labelNombre);
+
+        txtNombreTrabajador = new JTextField();
+        txtNombreTrabajador.setBounds(25, 213, 150, 25);
+        txtNombreTrabajador.setBackground(new Color(224, 224, 224));
+        txtNombreTrabajador.setFont(new java.awt.Font("Andale Mono", 1, 14));
+        txtNombreTrabajador.setForeground(new java.awt.Color(255, 0, 0));
+        add(txtNombreTrabajador);
+
 
 
     }
@@ -118,7 +131,7 @@ public class Principal extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         Principal principal = new Principal();
-        principal.setBounds(0, 0, 400, 500);
+        principal.setBounds(0, 0, 700, 800);
         principal.setVisible(true);
         principal.setResizable(false);
         principal.setLocationRelativeTo(null);
