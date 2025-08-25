@@ -121,6 +121,32 @@ public class Principal extends JFrame implements ActionListener {
         txtNombreTrabajador.setForeground(new java.awt.Color(255, 0, 0));
         add(txtNombreTrabajador);
 
+        labelAPaterno = new JLabel("Apellido Paterno");
+        labelAPaterno.setBounds(25, 248, 180, 25);
+        labelAPaterno.setFont(new Font("Andale Mono", 1, 12));
+        labelAPaterno.setForeground(new Color(255, 255, 255));
+        add(labelAPaterno);
+
+        txtAPaternoTrabajador = new JTextField();
+        txtAPaternoTrabajador.setBounds(25, 273, 150, 25);
+        txtAPaternoTrabajador.setBackground(new java.awt.Color(224, 224, 224));
+        txtAPaternoTrabajador.setFont(new java.awt.Font("Andale Mono", 1, 14));
+        txtAPaternoTrabajador.setForeground(new java.awt.Color(255, 0, 0));
+        add(txtAPaternoTrabajador);
+
+        labelAMaterno = new JLabel("Apellido Materno");
+        labelAMaterno.setBounds(25, 308, 180, 25);
+        labelAMaterno.setFont(new Font("Andale Mono", 1, 12));
+        labelAMaterno.setForeground(new Color(255, 255, 255));
+        add(labelAMaterno);
+
+        txtAMaternoTrabajador = new JTextField();
+        txtAMaternoTrabajador.setBounds(25, 334, 150, 25);
+        txtAMaternoTrabajador.setBackground(new java.awt.Color(224, 224, 224));
+        txtAMaternoTrabajador.setFont(new java.awt.Font("Andale Mono", 1, 14));
+        txtAMaternoTrabajador.setForeground(new java.awt.Color(255, 0, 0));
+        add(txtAMaternoTrabajador);
+
 
 
     }
