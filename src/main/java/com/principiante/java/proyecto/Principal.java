@@ -91,10 +91,23 @@ public class Principal extends JFrame implements ActionListener {
         miSalir.setForeground(new Color(255, 0, 0));
         menuColorFondo.addActionListener(this);
 
-        ImageIcon imagen = new ImageIcon(getClass().getResource("/images/logo-codca.png"));
+        ImageIcon imagen = new ImageIcon(getClass().getResource("/images/logo-coca.png"));
         labelLogo = new JLabel(imagen);
         labelLogo.setBounds(5, 5, 250, 100);
         add(labelLogo);
+
+        labelBienvenido = new JLabel("Bienvenido");
+        labelBienvenido.setBounds(280, 30, 300, 50);
+        labelBienvenido.setFont(new Font("Andale Mono", 1, 32));
+        labelBienvenido.setForeground(new Color(255, 255, 255));
+        add(labelBienvenido);
+
+        labelTitle = new JLabel("Datos del trabajador para el cálculo de vacaciones");
+        labelTitle.setBounds(45, 140, 900, 25);
+        labelTitle.setFont(new Font("Andale Mono", 0, 24));
+        labelTitle.setForeground(new Color(255, 255, 255));
+        add(labelTitle);
+
 
 
     }
