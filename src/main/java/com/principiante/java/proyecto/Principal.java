@@ -147,6 +147,39 @@ public class Principal extends JFrame implements ActionListener {
         txtAMaternoTrabajador.setForeground(new java.awt.Color(255, 0, 0));
         add(txtAMaternoTrabajador);
 
+        labelDepartamento = new JLabel("Selecciona el Departamento:");
+        labelDepartamento.setBounds(220, 188, 180, 25);
+        labelDepartamento.setFont(new Font("Andale Mono", 1, 12));
+        labelDepartamento.setForeground(new Color(255, 255, 255));
+        add(labelDepartamento);
+
+        comboDepartamento = new JComboBox();
+        comboDepartamento.setBounds(220, 213, 220, 25);
+        comboDepartamento.setBackground(new Color(224, 224, 224));
+        comboDepartamento.setFont(new Font("Andale Mono", 1, 14));
+        comboDepartamento.setForeground(new Color(255, 0, 0));
+        add(comboDepartamento);
+        comboDepartamento.addItem("");
+        comboDepartamento.addItem("Atencion al Cliente");
+        comboDepartamento.addItem("Departamento de Logística");
+        comboDepartamento.addItem("Departamento de Gerencia");
+
+        labelAntiguedad = new JLabel("Selecciona la Antiguedad:");
+        labelAntiguedad.setBounds(220, 248, 180, 25);
+        labelAntiguedad.setFont(new Font("Andale Mono", 1, 12));
+        labelAntiguedad.setForeground(new Color(255, 255, 255));
+        add(labelAntiguedad);
+
+        comboAntiguedad = new JComboBox();
+        comboAntiguedad.setBounds(220, 273, 220, 25);
+        comboAntiguedad.setBackground(new Color(224, 224, 224));
+        comboAntiguedad.setFont(new Font("Andale Mono", 1, 14));
+        comboAntiguedad.setForeground(new Color(255, 0, 0));
+        add(comboAntiguedad);
+        comboAntiguedad.addItem("");
+        comboAntiguedad.addItem("1 año de servicio");
+        comboAntiguedad.addItem("2 a 6 años de servicio");
+        comboAntiguedad.addItem("7 años o más de servicio");
 
 
     }
