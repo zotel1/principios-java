@@ -181,7 +181,27 @@ public class Principal extends JFrame implements ActionListener {
         comboAntiguedad.addItem("2 a 6 años de servicio");
         comboAntiguedad.addItem("7 años o más de servicio");
 
+        labelResultado = new JLabel("Resultado del Cálculo");
+        labelResultado.setBounds(220, 307, 180, 25);
+        labelResultado.setFont(new Font("Andale Mono", 1, 12));
+        labelResultado.setForeground(new Color(255, 0, 0));
+        add(labelResultado);
 
+        textArea1 = new JTextArea();
+        textArea1.setEditable(false);
+        textArea1.setBackground(new Color(224, 224, 224));
+        textArea1.setFont(new Font("Andale Mono", 1, 11));
+        textArea1.setForeground(new Color(255, 0, 0));
+        textArea1.setText("\n   Aquí aparece el resultado del cálculo de las vacaciones.");
+        scrollPane1 = new JScrollPane(textArea1);
+        scrollPane1.setBounds(220, 333, 385, 90);
+        add(scrollPane1);
+
+        labelFooter = new JLabel("©2017 The Coca-Cola Company | Todos los derechos reservados");
+        labelFooter.setBounds(135, 445, 500, 30);
+        labelFooter.setFont(new Font("Andale Mono", 1, 12));
+        labelFooter.setForeground(new Color(255, 255, 255));
+        add(labelFooter);
     }
 
     public void actionPerformed(ActionEvent e){
