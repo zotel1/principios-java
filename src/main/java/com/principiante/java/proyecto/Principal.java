@@ -205,7 +205,27 @@ public class Principal extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e){
+        if (e.getSource() == miCalculo){
 
+        }
+        if (e.getSource() == miRojo){
+
+        }
+        if (e.getSource() == miNegro){
+
+        }
+        if (e.getSource() == miMorado){
+
+        }
+        if (e.getSource() == miNuevo){
+
+        }
+        if (e.getSource() == miSalir){
+
+        }
+        if (e.getSource() == miElCreador){
+
+        }
     }
 
     public static void main(String[] args) {
