@@ -47,7 +47,7 @@ public class Bienvenida extends JFrame implements ActionListener {
         label4.setForeground(new Color(255,0,0));
         add(textField1);
 
-        boton1 = new JButton();
+        boton1 = new JButton("Ingresar");
         boton1.setBounds(125,280, 100, 30);
         boton1.setBackground(new Color(255,255, 255));
         boton1.setFont(new Font("Andale Mono", 1, 14));
@@ -60,7 +60,14 @@ public class Bienvenida extends JFrame implements ActionListener {
         if (e.getSource() == boton1){
             texto = textField1.getText().trim();
             if (texto.equals("")){
-
+                JOptionPane.showMessageDialog(null, "Debes ingresar tu nombre.");
+            } else {
+                Licencia licencia = new Licencia();
+                licencia.setBounds(0,0, 600, 400);
+                licencia.setVisible(true);
+                licencia.setResizable(false);
+                licencia.setLocationRelativeTo(null);
+                this.setVisible(false);
             }
         }
     }
