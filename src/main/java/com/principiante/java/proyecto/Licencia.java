@@ -14,11 +14,15 @@ public class Licencia extends JFrame implements ChangeListener, ActionListener {
     private JButton boton1, boton2;
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
+    String nombre = "";
 
     public Licencia(){
         setLayout(null);
         setTitle("Licencia de uso");
         setIconImage(new ImageIcon(getClass().getResource("/images/icon.png")).getImage());
+        Bienvenida ventanaBienvenida = new Bienvenida();
+        nombre = ventanaBienvenida.texto;
+
 
         label1 = new JLabel("TÉRMINOS Y CONDICIONES");
         label1.setBounds(215,5, 200, 30);
@@ -41,7 +45,7 @@ public class Licencia extends JFrame implements ChangeListener, ActionListener {
         scrollPane1.setBounds(10, 40, 575, 200);
         add(scrollPane1);
 
-        check1 = new JCheckBox("Yo Acepto");
+        check1 = new JCheckBox("Yo " + nombre + " Acepto");
         check1.setBounds(10, 250, 300, 30);
         check1.addChangeListener(this);
         add(check1);
@@ -65,11 +69,31 @@ public class Licencia extends JFrame implements ChangeListener, ActionListener {
     }
 
     public void stateChanged(ChangeEvent e){
-
+        if (check1.isSelected() == true){
+            boton1.setEnabled(true);
+            boton2.setEnabled(false);
+        } else {
+            boton1.setEnabled(false);
+            boton2.setEnabled(true);
+        }
     }
 
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource() == boton1){
+            Principal principal = new Principal();
+            principal.setBounds(0, 0, 700, 800);
+            principal.setVisible(true);
+            principal.setResizable(false);
+            principal.setLocationRelativeTo(null);
+            this.setVisible(false);
+        } else if (e.getSource() == boton2) {
+            Bienvenida bienvenida = new Bienvenida();
+            bienvenida.setBounds(0, 0, 350, 400);
+            bienvenida.setVisible(true);
+            bienvenida.setResizable(false);
+            bienvenida.setLocationRelativeTo(null);
+            this.setVisible(false);
+        }
     }
 
     public static void main(String[] args) {
