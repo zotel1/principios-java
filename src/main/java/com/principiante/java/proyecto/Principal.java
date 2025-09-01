@@ -15,6 +15,7 @@ public class Principal extends JFrame implements ActionListener {
     private JComboBox comboDepartamento, comboAntiguedad;
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
+    String nombreAdministrador = "";
 
     // Constructor
     public Principal(){
@@ -22,6 +23,9 @@ public class Principal extends JFrame implements ActionListener {
         setTitle("Pantalla principal");
         getContentPane().setBackground(new Color(255, 0, 0));
         setIconImage(new ImageIcon(getClass().getResource("/images/icon.png")).getImage());
+        Bienvenida ventanaBienvenida = new Bienvenida();
+        nombreAdministrador = ventanaBienvenida.texto;
+
 
         mb = new JMenuBar();
         mb.setBackground(new Color(255, 0, 0));
@@ -96,7 +100,7 @@ public class Principal extends JFrame implements ActionListener {
         labelLogo.setBounds(5, 5, 250, 100);
         add(labelLogo);
 
-        labelBienvenido = new JLabel("Bienvenido");
+        labelBienvenido = new JLabel("Bienvenido " + nombreAdministrador);
         labelBienvenido.setBounds(280, 30, 300, 50);
         labelBienvenido.setFont(new Font("Andale Mono", 1, 32));
         labelBienvenido.setForeground(new Color(255, 255, 255));
@@ -207,6 +211,33 @@ public class Principal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == miCalculo){
 
+            String nombreTrabajador = txtNombreTrabajador.getText();
+            String AP = txtAPaternoTrabajador.getText();
+            String AM = txtAMaternoTrabajador.getText();
+            String Departamento = comboDepartamento.getSelectedItem().toString();
+            String Antiguedad = comboAntiguedad.getSelectedItem().toString();
+
+            if (nombreTrabajador.equals("") || AP.equals("") || AM.equals("") || Departamento.equals("") || Antiguedad.equals("")){
+                JOptionPane.showMessageDialog(null, "Debes llenar todos los campos.");
+            } else {
+                if (Departamento.equals("Atención al Cliente")){
+                    if (Antiguedad.equals("1 año de servicio")){
+                        textArea1.setText("\n        El trabajador " +nombreTrabajador + " " + AP + " " + AM +
+                                          "\n        quien labura en " + Departamento + " con " + Antiguedad +
+                                          "\n        recibe 6 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("2 a 6 años de servicios")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                          "\n        quien labura en " + Departamento + " con " + Antiguedad +
+                                          "\n        recibe 14 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("7 años o más de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                          "\n        quien laburea en " + Departamento + " con " + Antiguedad +
+                                          "\n        recibe 20m días de vacaciones.");
+                    }
+                }
+            }
         }
         if (e.getSource() == miRojo){
 
