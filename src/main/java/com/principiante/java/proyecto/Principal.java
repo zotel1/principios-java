@@ -234,19 +234,54 @@ public class Principal extends JFrame implements ActionListener {
                     if (Antiguedad.equals("7 años o más de servicio")){
                         textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
                                           "\n        quien laburea en " + Departamento + " con " + Antiguedad +
-                                          "\n        recibe 20m días de vacaciones.");
+                                          "\n        recibe 20 días de vacaciones.");
+                    }
+                }
+
+                if (Departamento.equals("Departamento de Logística")){
+                    if (Antiguedad.equals("1 año de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                          "\n        quien laburea en " + Departamento + " con " + Antiguedad +
+                                          "\n        recibe 7 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("2 a 6 años de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n                  quien laburea en " + Departamento + " con " + Antiguedad +
+                                "\n                  recibe 15 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("7 años o más de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n                  quien laburea en " + Departamento + " con " + Antiguedad +
+                                "\n                  recibe 22 días de vacaciones.");
+                    }
+                }
+                if (Departamento.equals("Departamento de Gerencia")){
+                    if (Antiguedad.equals("1 año de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n        quien laburea en " + Departamento + " con " + Antiguedad +
+                                "\n        recibe 10 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("2 a 6 años de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n                  quien laburea en " + Departamento + " con " + Antiguedad +
+                                "\n                  recibe 20 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("7 años o más de servicio")){
+                        textArea1.setText("\n        El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n                  quien laburea en " + Departamento + " con " + Antiguedad +
+                                "\n                  recibe 30 días de vacaciones.");
                     }
                 }
             }
         }
         if (e.getSource() == miRojo){
-
+            getContentPane().setBackground(new Color(255, 0, 0));
         }
         if (e.getSource() == miNegro){
-
+            getContentPane().setBackground(new Color(0, 0, 0));
         }
         if (e.getSource() == miMorado){
-
+            getContentPane().setBackground(new Color(51, 0, 51));
         }
         if (e.getSource() == miNuevo){
 
