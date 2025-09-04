@@ -284,13 +284,24 @@ public class Principal extends JFrame implements ActionListener {
             getContentPane().setBackground(new Color(51, 0, 51));
         }
         if (e.getSource() == miNuevo){
-
+            txtNombreTrabajador.setText("");
+            txtAPaternoTrabajador.setText("");
+            txtAMaternoTrabajador.setText("");
+            comboDepartamento.setSelectedIndex(0);
+            comboAntiguedad.setSelectedIndex(0);
+            textArea1.setText("\n   Aquí aparece el resultado del cálculo de las vacaciones.");
         }
         if (e.getSource() == miSalir){
-
+            Bienvenida bienvenida = new Bienvenida();
+            bienvenida.setBounds(0, 0, 350, 400);
+            bienvenida.setVisible(true);
+            bienvenida.setResizable(false);
+            bienvenida.setLocationRelativeTo(null);
+            this.setVisible(false);
         }
         if (e.getSource() == miElCreador){
-
+            JOptionPane.showMessageDialog(null, "Tecnico Superior en Desarrollo de Software\n"+
+                                                                        "https://cristian-sigel-web-development.vercel.app/");
         }
     }
 
