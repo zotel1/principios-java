@@ -20,6 +20,7 @@ public class Principal extends JFrame implements ActionListener {
     // Constructor
     public Principal(){
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pantalla principal");
         getContentPane().setBackground(new Color(255, 0, 0));
         setIconImage(new ImageIcon(getClass().getResource("/images/icon.png")).getImage());
@@ -81,19 +82,20 @@ public class Principal extends JFrame implements ActionListener {
         miNuevo = new JMenuItem("Nuevo");
         miNuevo.setFont(new Font("Andale Mono", 1, 14));
         miNuevo.setForeground(new Color(255, 0, 0));
-        menuColorFondo.add(miNuevo);
+        menuOpciones.add(miNuevo);
         miNuevo.addActionListener(this);
 
         miElCreador = new JMenuItem("El creador");
         miElCreador.setFont(new Font("Andale Mono", 1, 14));
         miElCreador.setForeground(new Color(255, 0,0));
-        menuColorFondo.add(miElCreador);
+        menuAcercaDe.add(miElCreador);
         miElCreador.addActionListener(this);
 
         miSalir = new JMenuItem("Salir");
         miSalir.setFont(new Font("Andale mono", 1, 14));
         miSalir.setForeground(new Color(255, 0, 0));
-        menuColorFondo.addActionListener(this);
+        menuOpciones.add(miSalir);
+        miSalir.addActionListener(this);
 
         ImageIcon imagen = new ImageIcon(getClass().getResource("/images/logo-coca.png"));
         labelLogo = new JLabel(imagen);
@@ -210,7 +212,6 @@ public class Principal extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == miCalculo){
-
             String nombreTrabajador = txtNombreTrabajador.getText();
             String AP = txtAPaternoTrabajador.getText();
             String AM = txtAMaternoTrabajador.getText();
